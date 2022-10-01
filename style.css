@@ -1,0 +1,192 @@
+   * {
+    box-sizing: border-box;
+ }
+ :root{
+    --body-color: #252730;
+    --card-color: #353C5E;
+    --title-color: #FFFFFF;
+    --nav-color: #FFF;
+    --top-color: red
+    
+}
+
+body.dark{
+   --body-color: #C3CBE980;
+   --card-color: #FFF;
+   --title-color: #000;
+   --nav-color: #000;
+   --top-color: #4F73FE;
+}
+
+   body {
+ 
+    transition: background 0.2s linear;
+    background-color: var(--body-color);
+    margin: 0;
+    font-family: sans-serif;
+}
+
+   body.dark {
+    background-color: var(--body-color);
+}
+
+.wrapper {
+    border-top: solid 5px var(--top-color);
+    color: var(--title-color);
+    background: var(--card-color);
+    width: 340px;
+    height: 242px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left: 36px;
+    margin-top: 130px;
+}
+@media (min-width: 960px){
+  .wrapper {
+    border-top: solid 5px var(--top-color);
+    color: var(--title-color);
+    background: var(--card-color);
+    width: 340px;
+    height: 242px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-left: 320px;
+    margin-top: 130px;
+}
+ }
+.wrapp {
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 11pt;
+    padding-left: 6pt;
+    padding-right: 6pt;
+    letter-spacing: 1px;
+}
+::selection{
+  color: #333;
+  background: #4884D4BD;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  width: 50px;
+  height: 26px;
+  background-color:#111;
+  display: flex;
+  border-radius:50px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px;
+  padding-right: 5px;
+  position: relative;
+  transform: scale(1.0);
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+/*  target the elemenent after the label*/
+.checkbox:checked + .label .ball{
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: pink;
+}
+
+.fa-sun {
+  color: yellow;
+}
+
+.container
+{
+    position: relative;
+    width:100%;
+    height:100vh;
+}
+.container #open
+{
+    display: inline-block;
+    font-size:28px;
+    margin: 10px;
+    color:var(--nav-color);
+    cursor: pointer;
+    float: right;
+}
+.menubar
+{
+    height:100vh;
+    width:100%;
+    position: absolute;
+    top:0;
+    background: rgba(0, 0, 0, 0.70);
+    visibility: hidden;
+}
+.menubar #close
+{
+    position: absolute;
+    right:0;
+    margin: 40px;
+    font-size: 30px;
+    color:white;
+    cursor: pointer;
+}
+.menubar ul
+{
+    list-style: none;
+    text-align: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+    flex-direction: column;
+}
+@media (min-width: 960px){
+  .menubar ul
+{
+    list-style: none;
+    text-align: center;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+    flex-direction: column;
+}
+}
+.menubar ul li
+{
+    font-size:25px;
+    margin: 2px 0px;
+    height:60px;
+    width:100%;
+    line-height:60px;
+}
+.menubar ul li a
+{
+    text-decoration: none;
+    color:white;
+}
+.menubar ul li:hover
+{
+    background: #0f3e6d;
+}
+
+.active {
+  background: #0f3e6d;
+}
