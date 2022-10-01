@@ -2,4 +2,4 @@
 <ul>HTML</ul>
 <ul>CSS</ul>
 <ul>Javascript</ul>
- <p>If you want to donate</p><a href="">Click Here</a>
+ <b>If you want to donate</b> <a href="">Click Here</a>
